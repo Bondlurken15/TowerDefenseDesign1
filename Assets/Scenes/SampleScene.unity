@@ -995,14 +995,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower Base
       objectReference: {fileID: 0}
-    - target: {fileID: 6025251827436549033, guid: be369cacbbff69d43ad3d33735127418, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809929618983358519, guid: be369cacbbff69d43ad3d33735127418, type: 3}
-      propertyPath: Guns.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: bdff586df96601041a56d872326f3455, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

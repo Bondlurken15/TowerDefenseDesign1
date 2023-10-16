@@ -13,21 +13,13 @@ MonoBehaviour:
   m_Name: Triple Fast Bullet
   m_EditorClassIdentifier: 
   BaseBulletOffset: 0
-  ReloadModifier: 1
-  FireDelay: 1
+  ReloadModifier: 11.4
+  FireDelay: 0.5
   Bullets:
   - ModelKey: CubeBullet
     ColorFactor: {r: 0.023584902, g: 0.29754236, b: 1, a: 0}
     SpeedFactor: 20
     FireAngleOffset: -15
-    FireDelay: 0
-    SizeFactor: 1
-    ImpactDamage: 1
-    ImpactHealth: 1
-  - ModelKey: CubeBullet
-    ColorFactor: {r: 0.023584902, g: 0.29754236, b: 1, a: 0}
-    SpeedFactor: 20
-    FireAngleOffset: 0
     FireDelay: 0
     SizeFactor: 1
     ImpactDamage: 1

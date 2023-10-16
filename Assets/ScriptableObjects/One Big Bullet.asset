@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: One Big Bullet
   m_EditorClassIdentifier: 
   BaseBulletOffset: 0
-  ReloadModifier: 1
+  ReloadModifier: 0
   FireDelay: 1
   Bullets:
   - ModelKey: SphereBullet
     ColorFactor: {r: 0, g: 0, b: 0, a: 0}
     SpeedFactor: 10
     FireAngleOffset: 0
-    FireDelay: 0
+    FireDelay: 5
     SizeFactor: 10
     ImpactDamage: 10
     ImpactHealth: 3

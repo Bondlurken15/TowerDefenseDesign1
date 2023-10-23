@@ -1662,6 +1662,26 @@ PrefabInstance:
       propertyPath: PlayerHealthText
       value: 
       objectReference: {fileID: 1841124901}
+    - target: {fileID: 7314929749039706950, guid: 97c3b63cda748f1408d01b69abfb5f51, type: 3}
+      propertyPath: SpawnableObjects.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314929749039706950, guid: 97c3b63cda748f1408d01b69abfb5f51, type: 3}
+      propertyPath: SpawnableObjects.Array.data[6]
+      value: 
+      objectReference: {fileID: 5600170160763236132, guid: d6b3f6d191ee8e347bc62be0eac63609, type: 3}
+    - target: {fileID: 7314929749039706950, guid: 97c3b63cda748f1408d01b69abfb5f51, type: 3}
+      propertyPath: EnemyWavesInLevel.Array.data[0].WaveKey.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314929749039706950, guid: 97c3b63cda748f1408d01b69abfb5f51, type: 3}
+      propertyPath: EnemyWavesInLevel.Array.data[0].WaveKey.Array.data[0]
+      value: Wave1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314929749039706950, guid: 97c3b63cda748f1408d01b69abfb5f51, type: 3}
+      propertyPath: EnemyWavesInLevel.Array.data[0].WaveKey.Array.data[1]
+      value: Wave1
+      objectReference: {fileID: 0}
     - target: {fileID: 8180859174309889466, guid: 97c3b63cda748f1408d01b69abfb5f51, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

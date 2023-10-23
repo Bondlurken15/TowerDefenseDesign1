@@ -14,9 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LockOnRange: 100
   WavesPerCycle:
-  - {fileID: 11400000, guid: fbc7632b5f1f4554ab7c1cb461344d62, type: 2}
-  - {fileID: 11400000, guid: fbc7632b5f1f4554ab7c1cb461344d62, type: 2}
   - {fileID: 11400000, guid: 7bad3c34e046947489c12eb3a3bb7673, type: 2}
-  CurrentWave: 0
-  WaveTimer: 0
-  LockedOnTargetEnemy: {fileID: 0}
+  - {fileID: 11400000, guid: fbc7632b5f1f4554ab7c1cb461344d62, type: 2}
+  - {fileID: 11400000, guid: fbc7632b5f1f4554ab7c1cb461344d62, type: 2}

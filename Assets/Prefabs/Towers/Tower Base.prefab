@@ -119,5 +119,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Guns:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: bdff586df96601041a56d872326f3455, type: 2}
   CurrentGun: 0
+  CurrentBullet: 0
+  BulletDelayTimer: 0
+  CurrentWave: 0
+  WaveTimer: 0
+  LockedOnTargetEnemy: {fileID: 0}

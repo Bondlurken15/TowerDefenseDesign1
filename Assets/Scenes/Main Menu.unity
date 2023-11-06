@@ -891,11 +891,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b351e4c31487ba49a640de0e74aac7c, type: 3}
---- !u!223 &1462636352 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 1076490110807180936, guid: 0b351e4c31487ba49a640de0e74aac7c, type: 3}
-  m_PrefabInstance: {fileID: 1462636351}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1640637267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,6 +1024,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640637267}
   m_CullTransparentMesh: 1
+--- !u!1 &1695112529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3700105159657963460, guid: 0b351e4c31487ba49a640de0e74aac7c, type: 3}
+  m_PrefabInstance: {fileID: 1462636351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1937750233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,7 +1073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2796481fc8df2a349bdf51c05b8512e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpscareCanvas: {fileID: 1462636352}
+  jumpscareCanvas: {fileID: 1695112529}
   videoPlayer: {fileID: 870775622}
 --- !u!1 &2034435749
 GameObject:

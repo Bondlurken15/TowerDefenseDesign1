@@ -6,7 +6,7 @@ using UnityEngine.Video;
 
 public class SceneChanger : MonoBehaviour
 {
-    [SerializeField] Canvas jumpscareCanvas;
+    [SerializeField] GameObject jumpscareCanvas;
     [SerializeField] GameObject videoPlayer;
 
     private void Start()

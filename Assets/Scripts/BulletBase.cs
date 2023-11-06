@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class BulletBase : MonoBehaviour
 {
+    
     [Header("Bullet Data")]
     public Bullet BulletData = new Bullet();
     [Header("Static References")]
@@ -23,7 +24,7 @@ public class BulletBase : MonoBehaviour
     {
         transform.Translate(MoveDirection * Time.deltaTime * BulletData.SpeedFactor);
         lifeTime += Time.deltaTime;
-        if (lifeTime >= 100.0f)
+        if (lifeTime >= 100)
         {
             GameObject.Destroy(this.gameObject);
         }
@@ -34,7 +35,7 @@ public class BulletBase : MonoBehaviour
         var enemyCollider = other.gameObject.GetComponent<EnemyBase>();
         if (enemyCollider != null)
         {
-            enemyCollider.ImpactDamage(BulletData.ImpactDamage);
+            //enemyCollider.ImpactDamage(BulletData.ImpactDamage);
             BulletData.ImpactHealth--;
             if (BulletData.ImpactHealth <= 0)
             {

@@ -3,25 +3,20 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
-/*
-THE MASTER BECOMES 
-A HUMAN FURNACE
-THAT MAY SMITE 
-AND PUNISH GOD
-*/
+
 [System.Serializable]
 public class PlayerData
 {
     [Header("Static Values")]
-    public int PlayerMaxHealth = 10;
+    public int playerMaxHealth = 10;
     [Header("Dynamic Values")]
-    public int PlayerHealth = 10;
-    public int PlayerMoney = 0;
+    public int playerHealth = 10;
+    public int playerMoney = 0;
 
     public void Reset()
     {
-        PlayerHealth = PlayerMaxHealth;
-        PlayerMoney = 0;
+        playerHealth = playerMaxHealth;
+        playerMoney = 0;
     }
 }
 public class GameManager : MonoBehaviour
@@ -64,7 +59,7 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        PlayerMoneyText.text = CurrentPlayerData.PlayerMoney.ToString() + "$";
+        PlayerMoneyText.text = CurrentPlayerData.playerMoney.ToString() + "$";
     }
     public void OnSpawnNextWave()
     {
@@ -105,10 +100,10 @@ public class GameManager : MonoBehaviour
         var enemyCollider = other.gameObject.GetComponent<EnemyBase>();
         if (enemyCollider != null)
         {
-            CurrentPlayerData.PlayerHealth -= enemyCollider.EnemyData.Damage;
+            CurrentPlayerData.playerHealth -= enemyCollider.EnemyData.Damage;
             if(PlayerHealthText != null)
             {
-                PlayerHealthText.text = CurrentPlayerData.PlayerHealth.ToString() + " HP";
+                PlayerHealthText.text = CurrentPlayerData.playerHealth.ToString() + " HP";
             }
             GameObject.Destroy(enemyCollider.gameObject);
         }

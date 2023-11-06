@@ -17,10 +17,25 @@ public class Bullet
     [Header("How Big is the bullet?")]
     public float SizeFactor = 1.0f;
     [Header("How much damage does the bullet do?")]
-    public int ImpactDamage = 1;
+    public float ImpactDamage = 1;
     [Header("How many times can the bullet hit an enemy?")]
-    public int ImpactHealth = 1;
-
+    public float ImpactHealth = 1;
+    /*
+    public void Empty()
+    {
+        SpeedFactor = 0;
+        FireDelay = 0;
+        ImpactDamage = 0;
+        ImpactHealth = 0;
+    }
+    public void ApplyModifiers()
+    {
+        
+        SpeedFactor += Shop.modifiedBulletData.SpeedFactor;
+        FireDelay += Shop.modifiedBulletData.FireDelay;
+        ImpactDamage += Shop.modifiedBulletData.ImpactDamage;
+        ImpactHealth += Shop.modifiedBulletData.ImpactHealth;
+    }*/
     public void Copy(Bullet aBulletToCopy)
     {
         SpawnKey = aBulletToCopy.SpawnKey;
@@ -35,6 +50,7 @@ public class Bullet
     public void Reset()
     {
 
-    }
 
+    }
 }
+

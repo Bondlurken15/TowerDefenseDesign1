@@ -26,7 +26,7 @@ public class EnemyBase : MonoBehaviour
         EnemyData.Health -= aDamageNr;
         if(EnemyData.Health < 0 )
         {
-            GameManager.GlobalGameManager.CurrentPlayerData.PlayerMoney += EnemyData.MoneyOnKill;
+            GameManager.GlobalGameManager.CurrentPlayerData.playerMoney += EnemyData.MoneyOnKill;
             GameObject.Destroy(this.gameObject);
         }
     }

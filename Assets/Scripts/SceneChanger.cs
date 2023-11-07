@@ -6,15 +6,6 @@ using UnityEngine.Video;
 
 public class SceneChanger : MonoBehaviour
 {
-    [SerializeField] GameObject jumpscareCanvas;
-    [SerializeField] GameObject videoPlayer;
-
-    private void Start()
-    {
-        jumpscareCanvas.gameObject.SetActive(false);
-        videoPlayer.gameObject.SetActive(false);
-    }
-
     public void ChangeScene(int buildIndex)
     {
         SceneManager.LoadScene(buildIndex);
@@ -22,14 +13,11 @@ public class SceneChanger : MonoBehaviour
 
     public void QuitGame()
     {
-        StartCoroutine(JumpscareRoutine());
+        StartCoroutine(QuitRoutine());
     }
 
-    IEnumerator JumpscareRoutine()
+    IEnumerator QuitRoutine()
     {
-        jumpscareCanvas.gameObject.SetActive(true);
-        videoPlayer.gameObject.SetActive(true);
-
         yield return new WaitForSeconds(1);
 
         Application.Quit();

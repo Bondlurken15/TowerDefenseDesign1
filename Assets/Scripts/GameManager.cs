@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
     [Header("Dynamic References")]
     public List<EnemyBase> AllEnemies = new List<EnemyBase>();
 
+    SceneChanger sceneChanger;
 
     private void Awake()
     {
@@ -60,8 +61,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        sceneChanger = FindObjectOfType<SceneChanger>();
         DontDestroyOnLoad(this.gameObject);
-
     }
     private void Update()
     {
@@ -81,7 +82,10 @@ public class GameManager : MonoBehaviour
         }
         CurrentEnemyWave++;
         if (CurrentEnemyWave >= EnemyWavesInLevel.Count)
-        { CurrentEnemyWave = 0; }
+        {
+            sceneChanger.ChangeScene(2);
+        }
+        
         WaveNumberText.text = $"Wave {CurrentEnemyWave}/{EnemyWavesInLevel.Count}";
     }
 

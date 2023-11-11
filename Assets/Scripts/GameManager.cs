@@ -4,12 +4,7 @@ using TMPro;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.Rendering;
-/*
-THE MASTER BECOMES 
-A HUMAN FURNACE
-THAT MAY SMITE 
-AND PUNISH GOD
-*/
+
 [System.Serializable]
 public class PlayerData
 {
@@ -87,6 +82,12 @@ public class GameManager : MonoBehaviour
         }
         
         WaveNumberText.text = $"Wave {CurrentEnemyWave}/{EnemyWavesInLevel.Count}";
+    }
+
+    void CreateWave()
+    {
+        
+        //SpawnableObjects.Add(newWave)
     }
 
     public GameObject SpawnObject(string key, Vector3 aPostion = new Vector3())

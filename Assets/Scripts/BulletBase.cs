@@ -7,6 +7,7 @@ public class BulletBase : MonoBehaviour
 {
     [Header("Bullet Data")]
     public Bullet BulletData = new Bullet();
+    public float maxlifetime = 20;
     [Header("Static References")]
     public MeshRenderer myMeshRenderer = null;
     [Header("Dynamic Values")]
@@ -23,7 +24,7 @@ public class BulletBase : MonoBehaviour
     {
         transform.Translate(MoveDirection * Time.deltaTime * BulletData.SpeedFactor);
         lifeTime += Time.deltaTime;
-        if (lifeTime >= 100.0f)
+        if (lifeTime >= maxlifetime)
         {
             GameObject.Destroy(this.gameObject);
         }

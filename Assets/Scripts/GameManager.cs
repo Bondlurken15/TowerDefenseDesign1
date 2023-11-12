@@ -64,8 +64,6 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         PlayerMoneyText.text = CurrentPlayerData.PlayerMoney.ToString() + "$";
-
-        Debug.Log("My health is: " + EnemyData.Health);
     }
 
     public void OnSpawnNextWave()
@@ -91,7 +89,10 @@ public class GameManager : MonoBehaviour
 
     public void ModifyHealth(int healthModifier)
     {
-        EnemyData.Health += healthModifier;
+        foreach (var enemy in AllEnemies)
+        {
+            enemy.EnemyData.Health += healthModifier;
+        }
     }
 
     public GameObject SpawnObject(string key, Vector3 aPostion = new Vector3())

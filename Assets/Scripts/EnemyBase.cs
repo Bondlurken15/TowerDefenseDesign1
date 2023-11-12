@@ -9,8 +9,7 @@ public class EnemyBase : MonoBehaviour
 {
     [Header("Enemy Data")]
     public Enemy EnemyData = new Enemy();
-    [Header("Static References")]
-    public TextMeshProUGUI EnemyHealth = null;
+
     public void Initialize(Vector3 aMovementDirection, Enemy aEnemyContainer = null)
     {
         if(aEnemyContainer != null)
@@ -39,7 +38,6 @@ public class EnemyBase : MonoBehaviour
     void Update()
     {
         transform.Translate(EnemyData.MovementDirection * Time.deltaTime * EnemyData.MoveSpeed);
-        EnemyHealth.text = EnemyData.MaxHealth.ToString();
     }
 
     void OnDisable()

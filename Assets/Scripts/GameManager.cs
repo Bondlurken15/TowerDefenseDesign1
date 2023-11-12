@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour
     [Header("Dynamic References")]
     public List<EnemyBase> AllEnemies = new List<EnemyBase>();
 
+    public Enemy EnemyData = new Enemy();
+
     SceneChanger sceneChanger;
 
     private void Awake()
@@ -57,12 +59,15 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         sceneChanger = FindObjectOfType<SceneChanger>();
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
     private void Update()
     {
         PlayerMoneyText.text = CurrentPlayerData.PlayerMoney.ToString() + "$";
+
+        Debug.Log("My health is: " + EnemyData.Health);
     }
+
     public void OnSpawnNextWave()
     {
         DoSpawnWave();
@@ -78,16 +83,15 @@ public class GameManager : MonoBehaviour
         CurrentEnemyWave++;
         if (CurrentEnemyWave >= EnemyWavesInLevel.Count)
         {
-            sceneChanger.ChangeScene(2);
+            CurrentEnemyWave = 0;
         }
         
         WaveNumberText.text = $"Wave {CurrentEnemyWave}/{EnemyWavesInLevel.Count}";
     }
 
-    void CreateWave()
+    public void ModifyHealth(int healthModifier)
     {
-        
-        //SpawnableObjects.Add(newWave)
+        EnemyData.Health += healthModifier;
     }
 
     public GameObject SpawnObject(string key, Vector3 aPostion = new Vector3())
@@ -115,6 +119,10 @@ public class GameManager : MonoBehaviour
             if(PlayerHealthText != null)
             {
                 PlayerHealthText.text = CurrentPlayerData.PlayerHealth.ToString() + " HP";
+            }
+            if (CurrentPlayerData.PlayerHealth <= 0)
+            {
+                sceneChanger.ChangeScene(2);
             }
             GameObject.Destroy(enemyCollider.gameObject);
         }

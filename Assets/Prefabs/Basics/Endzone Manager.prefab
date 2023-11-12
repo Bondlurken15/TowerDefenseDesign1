@@ -125,11 +125,15 @@ MonoBehaviour:
   - {fileID: 506468609888630188, guid: 37874fcded8525d4ba324ef4571f8aa9, type: 3}
   - {fileID: 5600170160763236132, guid: bc9850c7f062b7649aa85a2b42278338, type: 3}
   - {fileID: 506468609888630188, guid: d591e24532e55534bb2c14646b12538b, type: 3}
+  - {fileID: 5600170160763236132, guid: d6b3f6d191ee8e347bc62be0eac63609, type: 3}
+  - {fileID: 5600170160763236132, guid: 7a1daf046952a1b47b91221e460bf8e7, type: 3}
   EnemyWavesInLevel:
   - WaveKey:
     - Wave1
   - WaveKey:
     - Wave2
+  - WaveKey:
+    - Empty wave
   CurrentEnemyWave: 0
   EnemyStartingPos: {fileID: 0}
   CurrentPlayerData:

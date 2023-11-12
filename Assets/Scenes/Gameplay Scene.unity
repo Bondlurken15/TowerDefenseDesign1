@@ -1962,6 +1962,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1546803825}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ModifyHealth
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2145500744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2028,42 +2040,6 @@ PrefabInstance:
       propertyPath: PlayerHealthText
       value: 
       objectReference: {fileID: 1841124901}
-    - target: {fileID: 7314929749039706950, guid: 97c3b63cda748f1408d01b69abfb5f51, type: 3}
-      propertyPath: SpawnableObjects.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7314929749039706950, guid: 97c3b63cda748f1408d01b69abfb5f51, type: 3}
-      propertyPath: EnemyWavesInLevel.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7314929749039706950, guid: 97c3b63cda748f1408d01b69abfb5f51, type: 3}
-      propertyPath: SpawnableObjects.Array.data[6]
-      value: 
-      objectReference: {fileID: 5600170160763236132, guid: d6b3f6d191ee8e347bc62be0eac63609, type: 3}
-    - target: {fileID: 7314929749039706950, guid: 97c3b63cda748f1408d01b69abfb5f51, type: 3}
-      propertyPath: SpawnableObjects.Array.data[7]
-      value: 
-      objectReference: {fileID: 5600170160763236132, guid: 7a1daf046952a1b47b91221e460bf8e7, type: 3}
-    - target: {fileID: 7314929749039706950, guid: 97c3b63cda748f1408d01b69abfb5f51, type: 3}
-      propertyPath: EnemyWavesInLevel.Array.data[0].WaveKey.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7314929749039706950, guid: 97c3b63cda748f1408d01b69abfb5f51, type: 3}
-      propertyPath: EnemyWavesInLevel.Array.data[2].WaveKey.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7314929749039706950, guid: 97c3b63cda748f1408d01b69abfb5f51, type: 3}
-      propertyPath: EnemyWavesInLevel.Array.data[0].WaveKey.Array.data[0]
-      value: Wave1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7314929749039706950, guid: 97c3b63cda748f1408d01b69abfb5f51, type: 3}
-      propertyPath: EnemyWavesInLevel.Array.data[0].WaveKey.Array.data[1]
-      value: Wave1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7314929749039706950, guid: 97c3b63cda748f1408d01b69abfb5f51, type: 3}
-      propertyPath: EnemyWavesInLevel.Array.data[2].WaveKey.Array.data[0]
-      value: Empty wave
-      objectReference: {fileID: 0}
     - target: {fileID: 8180859174309889466, guid: 97c3b63cda748f1408d01b69abfb5f51, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

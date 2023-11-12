@@ -17,7 +17,7 @@ public class Enemy
     public float MoveSpeed = 1.0f;
 
     [Header("Dynamic Values")]
-    public int Health = 0;
+    public int Health = 1;
     public Vector3 MovementDirection = Vector3.zero;
 
     public void Copy(Enemy aEnemyToCopy)
@@ -30,7 +30,7 @@ public class Enemy
     }
     public void Reset()
     {
-        Health = MaxHealth;
+        //Health = MaxHealth;
         MovementDirection = Vector3.zero;
     }
 }

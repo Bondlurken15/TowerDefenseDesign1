@@ -30,6 +30,7 @@ public class EnemyBase : MonoBehaviour
             GameObject.Destroy(this.gameObject);
         }
     }
+
     void Awake()
     {
         GameManager.GlobalGameManager.AllEnemies.Add(this);
@@ -38,7 +39,7 @@ public class EnemyBase : MonoBehaviour
     void Update()
     {
         transform.Translate(EnemyData.MovementDirection * Time.deltaTime * EnemyData.MoveSpeed);
-  
+        EnemyHealth.text = EnemyData.MaxHealth.ToString();
     }
 
     void OnDisable()

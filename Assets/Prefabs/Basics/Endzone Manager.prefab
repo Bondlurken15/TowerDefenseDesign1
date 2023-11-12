@@ -119,17 +119,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnableObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  EnemyWavesInLevel: []
+  - {fileID: 8079762548996616561, guid: f6263961946f301489fd3831f42eab21, type: 3}
+  - {fileID: 5564064010844980008, guid: 13d99056aa5464a4cbdc17b516906545, type: 3}
+  - {fileID: 7361977620993004290, guid: 8c4c3c23f62f0a1429c76b659229484d, type: 3}
+  - {fileID: 506468609888630188, guid: 37874fcded8525d4ba324ef4571f8aa9, type: 3}
+  - {fileID: 5600170160763236132, guid: bc9850c7f062b7649aa85a2b42278338, type: 3}
+  - {fileID: 506468609888630188, guid: d591e24532e55534bb2c14646b12538b, type: 3}
+  - {fileID: 5600170160763236132, guid: d6b3f6d191ee8e347bc62be0eac63609, type: 3}
+  EnemyWavesInLevel:
+  - WaveKey:
+    - Wave1
+  - WaveKey:
+    - Wave2
   CurrentEnemyWave: 0
   EnemyStartingPos: {fileID: 0}
   CurrentPlayerData:
     PlayerMaxHealth: 10
     PlayerHealth: 10
+    PlayerMoney: 0
   PlayerHealthText: {fileID: 0}
   PlayerMoneyText: {fileID: 0}
   WaveNumberText: {fileID: 0}
   AllEnemies: []
+  EnemyData:
+    SpawnDelay: 0
+    MaxHealth: 1
+    Damage: 1
+    MoneyOnKill: 0
+    MoveSpeed: 1
+    Health: 0
+    MovementDirection: {x: 0, y: 0, z: 0}

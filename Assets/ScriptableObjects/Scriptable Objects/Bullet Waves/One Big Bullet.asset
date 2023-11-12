@@ -20,6 +20,6 @@ MonoBehaviour:
     SpeedFactor: 10
     FireAngleOffset: 0
     FireDelay: 0
-    SizeFactor: 10
+    SizeFactor: 8
     ImpactDamage: 10
-    ImpactHealth: 3
+    ImpactHealth: 1

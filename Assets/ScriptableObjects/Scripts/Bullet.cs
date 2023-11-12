@@ -27,15 +27,12 @@ public class Bullet
         FireDelay = 0;
         ImpactDamage = 0;
         ImpactHealth = 0;
-    }
-    public void ApplyModifiers()
-    {
-        
-        SpeedFactor += Shop.modifiedBulletData.SpeedFactor;
-        FireDelay += Shop.modifiedBulletData.FireDelay;
-        ImpactDamage += Shop.modifiedBulletData.ImpactDamage;
-        ImpactHealth += Shop.modifiedBulletData.ImpactHealth;
     }*/
+    public void ModifyDmg(float dmgToAdd)
+    {
+        ImpactDamage += dmgToAdd;
+    }
+
     public void Copy(Bullet aBulletToCopy)
     {
         SpawnKey = aBulletToCopy.SpawnKey;

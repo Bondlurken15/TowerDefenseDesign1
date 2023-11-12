@@ -21,7 +21,7 @@ public class EnemyBase : MonoBehaviour
         EnemyData.MovementDirection = aMovementDirection.normalized;
     }
 
-    public void ImpactDamage(int aDamageNr)
+    public void ImpactDamage(float aDamageNr)
     {
         EnemyData.Health -= aDamageNr;
         if(EnemyData.Health < 0 )

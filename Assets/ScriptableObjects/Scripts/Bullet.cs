@@ -20,19 +20,18 @@ public class Bullet
     public float ImpactDamage = 1;
     [Header("How many times can the bullet hit an enemy?")]
     public float ImpactHealth = 1;
-    /*
-    public void Empty()
-    {
-        SpeedFactor = 0;
-        FireDelay = 0;
-        ImpactDamage = 0;
-        ImpactHealth = 0;
-    }*/
     public void ModifyDmg(float dmgToAdd)
     {
         ImpactDamage += dmgToAdd;
     }
-
+    public void ModifyBulletSpeed(float bulletSpeedToAdd)
+    {
+        SpeedFactor += bulletSpeedToAdd;
+    }
+    public void ModifyPierce(float pierceToAdd)
+    {
+        ImpactHealth += pierceToAdd;
+    }
     public void Copy(Bullet aBulletToCopy)
     {
         SpawnKey = aBulletToCopy.SpawnKey;
@@ -46,7 +45,6 @@ public class Bullet
     }
     public void Reset()
     {
-
 
     }
 }

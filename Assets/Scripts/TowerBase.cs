@@ -57,7 +57,6 @@ public class TowerBase : MonoBehaviour
             WaveTimer += Time.deltaTime;
             foreach (GunBaseObject gun in Guns)
             {
-          
                 if (WaveTimer >= gun.WavesPerCycle[CurrentWave].FireDelay)
                 {
                     StartCoroutine(FireWave(gun));

@@ -8,9 +8,9 @@ using UnityEngine.Rendering;
 public class PlayerData
 {
     [Header("Static Values")]
-    public int playerMaxHealth = 10;
+    public float playerMaxHealth = 100;
     [Header("Dynamic Values")]
-    public int playerHealth = 10;
+    public float playerHealth = 100;
     public int playerMoney = 0;
 
     public void Reset()
@@ -33,13 +33,12 @@ public class GameManager : MonoBehaviour
     public Transform EnemyStartingPos = null;
     [Header("Static References")]
     public PlayerData CurrentPlayerData = null;
-    public TextMeshProUGUI PlayerHealthText = null;
+    public TextMeshProUGUI playerHealthText = null;
+    public TextMeshProUGUI playerHealthText2 = null;
     public TextMeshProUGUI PlayerMoneyText = null;
     public TextMeshProUGUI WaveNumberText = null;
     [Header("Dynamic References")]
     public List<EnemyBase> AllEnemies = new List<EnemyBase>();
-
-
     private void Awake()
     {
         GlobalGameManager = this;
@@ -51,7 +50,6 @@ public class GameManager : MonoBehaviour
         }
         CurrentPlayerData.Reset();
     }
-
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -65,7 +63,6 @@ public class GameManager : MonoBehaviour
     {
         DoSpawnWave();
     }
-
     private void DoSpawnWave()   
     {
         foreach(string wavePart in EnemyWavesInLevel[CurrentEnemyWave].WaveKey)
@@ -78,7 +75,6 @@ public class GameManager : MonoBehaviour
         { CurrentEnemyWave = 0; }
         WaveNumberText.text = $"Wave {CurrentEnemyWave}/{EnemyWavesInLevel.Count}";
     }
-
     public GameObject SpawnObject(string key, Vector3 aPostion = new Vector3())
     {
         if (key.Length < 1)
@@ -95,17 +91,26 @@ public class GameManager : MonoBehaviour
         }
         return null;
     }
+    public void ModifyHealth(float healthToAdd)
+    {
+        CurrentPlayerData.playerHealth += healthToAdd;
+    }
     private void OnTriggerEnter(Collider other)
     {
         var enemyCollider = other.gameObject.GetComponent<EnemyBase>();
         if (enemyCollider != null)
         {
             CurrentPlayerData.playerHealth -= enemyCollider.EnemyData.Damage;
-            if(PlayerHealthText != null)
+            if(playerHealthText != null)
             {
-                PlayerHealthText.text = CurrentPlayerData.playerHealth.ToString() + " HP";
+                PlayerHealthText();
             }
             GameObject.Destroy(enemyCollider.gameObject);
         }
+    }
+    public void PlayerHealthText()
+    {
+        playerHealthText.text = ("Health: " + GameManager.GlobalGameManager.CurrentPlayerData.playerHealth.ToString("f0") + "hp");
+        playerHealthText2.text = ("Health: " + GameManager.GlobalGameManager.CurrentPlayerData.playerHealth.ToString("f0"));
     }
 }

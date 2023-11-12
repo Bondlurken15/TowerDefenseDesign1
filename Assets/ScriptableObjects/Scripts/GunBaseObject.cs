@@ -12,7 +12,6 @@ public class GunBaseObject : ScriptableObject
 
     public void Reset()
     {
-   
         foreach (BulletWave wave in WavesPerCycle)
         {
             wave.Reset();

@@ -13,6 +13,7 @@ public class PlayerData
     public float playerHealth = 100;
     public int playerMoney = 0;
 
+
     public void Reset()
     {
         playerHealth = playerMaxHealth;
@@ -39,6 +40,10 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI WaveNumberText = null;
     [Header("Dynamic References")]
     public List<EnemyBase> AllEnemies = new List<EnemyBase>();
+
+    SceneChanger sceneChanger;
+
+    public Enemy EnemyData = new Enemy();
     private void Awake()
     {
         GlobalGameManager = this;
@@ -52,12 +57,17 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
-
+        //DontDestroyOnLoad(this.gameObject);
+        sceneChanger = FindObjectOfType<SceneChanger>();
     }
     private void Update()
     {
         PlayerMoneyText.text = CurrentPlayerData.playerMoney.ToString() + "$";
+
+        if (CurrentPlayerData.playerHealth <= 0)
+        {
+            sceneChanger.ChangeScene(2);
+        }
     }
     public void OnSpawnNextWave()
     {
@@ -74,6 +84,13 @@ public class GameManager : MonoBehaviour
         if (CurrentEnemyWave >= EnemyWavesInLevel.Count)
         { CurrentEnemyWave = 0; }
         WaveNumberText.text = $"Wave {CurrentEnemyWave}/{EnemyWavesInLevel.Count}";
+    }
+    public void ModifyHealthForEnemies(int healthModifier)
+    {
+        foreach (var enemy in AllEnemies)
+        {
+            enemy.EnemyData.Health += healthModifier;
+        }
     }
     public GameObject SpawnObject(string key, Vector3 aPostion = new Vector3())
     {

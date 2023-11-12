@@ -30,7 +30,7 @@ public class Enemy
     }
     public void Reset()
     {
-        Health = MaxHealth;
+        //Health = MaxHealth;
         MovementDirection = Vector3.zero;
     }
 }
